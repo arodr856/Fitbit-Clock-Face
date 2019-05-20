@@ -1,5 +1,7 @@
 <svg viewport-fill="black">
-  <text x='50%' y='40%' id='date' fill='white' font-size='45' font-family='System-Regular' text-anchor='middle' text-length="20">
+  <text x='50%' y='40%' id='day' fill='white' font-size='45' font-family='System-Regular' text-anchor='middle' text-length="20">
+  </text>
+  <text x='50%' y='55%' id='date' fill='white' font-size='45' font-family='System-Regular' text-anchor='middle' text-length="20">
   </text>
   <g transform="rotate(90)">
     <text id="time" x="24%" y="-260" fill="white" font-size="45" font-family="System-Regular"

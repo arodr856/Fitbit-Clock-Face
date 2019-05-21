@@ -10,3 +10,10 @@
   height: 100%;
   fill: black;
 }
+
+#heartIcon {
+  opacity: .7;
+  width: 24;
+  height: 24;
+  fill: #FF214A;
+}

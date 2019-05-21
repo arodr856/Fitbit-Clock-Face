@@ -1,33 +1,40 @@
 import document from 'document';
-import clock from 'clock';
 
-import { days } from './js/date-data';
+import * as clockInitializer from './js/clock';
+import * as heartBeatController from './js/heart';
+import {today} from 'user-activity';
 
 const clockText = document.getElementById('time');
 const dateText = document.getElementById('date');
 const dayText = document.getElementById('day');
+const heartImg = document.getElementById('heartIcon');
+const bpmText = document.getElementById('bpm');
+let grow = true;
 
-// clock set up
-clock.granularity = 'seconds';
+clockInitializer.initialize((data) => {
+  clockText.text = data.time;
+  dateText.text = data.date;
+  dayText.text = data.day;
+  heartBeat();
+});
 
-clock.ontick = (event) => {
-  const currentTime = `${modHours(event.date.getHours())}:${event.date.getMinutes()}:${event.date.getSeconds()}`;
-  const currentDate = `${event.date.getMonth() + 1} / ${event.date.getDate()}`;
-  dateText.text = currentDate;
-  clockText.text = currentTime;
-  dayText.text = days[event.date.getDay()];
-}
+heartBeatController.initialize((data) => {
+  bpmText.text = data.rate;
+});
 
-const modHours = (hour) => {
-
-  const moddedHour = hour % 12;
-
-  if(moddedHour < 10){
-    if(moddedHour === 0)
-      return '01';
-    return (0 + moddedHour);
+function heartBeat(){
+  if(grow){
+    heartImg.width = 30;
+    heartImg.height = 30;
+    heartImg.style.opacity = 1;
+    grow = !grow;
   }else{
-    return moddedHour;
+    heartImg.width = 24;
+    heartImg.height = 24;
+    heartImg.style.opacity = .7;
+    grow = !grow;
   }
-
 }
+
+
+

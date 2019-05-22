@@ -2,6 +2,7 @@ import document from 'document';
 
 import * as clockInitializer from './js/clock';
 import * as heartBeatController from './js/heart';
+import * as statsController from './js/activity-stats';
 import {today} from 'user-activity';
 
 const clockText = document.getElementById('time');
@@ -9,6 +10,8 @@ const dateText = document.getElementById('date');
 const dayText = document.getElementById('day');
 const heartImg = document.getElementById('heartIcon');
 const bpmText = document.getElementById('bpm');
+const stepsText = document.getElementById('stepsText');
+const caloriesText = document.getElementById('caloriesText');
 let grow = true;
 
 
@@ -22,6 +25,11 @@ clockInitializer.initialize((data) => {
 
 heartBeatController.initialize((data) => {
   bpmText.text = data.rate;
+});
+
+statsController.initialize((data) => {
+  stepsText.text = data.steps;
+  caloriesText.text = data.calories;
 });
 
 

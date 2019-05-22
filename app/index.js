@@ -9,9 +9,8 @@ const dateText = document.getElementById('date');
 const dayText = document.getElementById('day');
 const heartImg = document.getElementById('heartIcon');
 const bpmText = document.getElementById('bpm');
-const statsSection = document.getElementById('stats-cycle');
 let grow = true;
-let isShowingHeartRate = false;
+
 
 
 clockInitializer.initialize((data) => {
@@ -22,7 +21,6 @@ clockInitializer.initialize((data) => {
 });
 
 heartBeatController.initialize((data) => {
-  console.log(`current heart rate: ${data.rate}`);
   bpmText.text = data.rate;
 });
 

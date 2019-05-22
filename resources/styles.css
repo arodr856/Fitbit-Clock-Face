@@ -1,8 +1,6 @@
-.defaultText {
-  font-size: 32;
-  font-family: System-Regular;
-  font-weight: regular;
-  text-length: 32;
+text {
+  font-family: Seville-Bold-Condensed;
+  /* font-weight: regular; */
 }
 
 #background {
@@ -12,6 +10,13 @@
 }
 
 #heartIcon {
+  opacity: .7;
+  width: 24;
+  height: 24;
+  fill: #FF214A;
+}
+
+image {
   opacity: .7;
   width: 24;
   height: 24;

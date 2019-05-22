@@ -22,21 +22,12 @@ clockInitializer.initialize((data) => {
 });
 
 heartBeatController.initialize((data) => {
+  console.log(`current heart rate: ${data.rate}`);
   bpmText.text = data.rate;
 });
 
-statsSection.onclick = function(e){ 
-  // if(!isShowingHeartRate){
-  //   statsSection.width = 30;
-  //   isShowingHeartRate = !isShowingHeartRate;
-  // }else{
-  //   statsSection.width = 100;
-  //   isShowingHeartRate = !isShowingHeartRate;
-  // }
-}
 
 function heartBeat(){
-  // console.log('heart beats')
   if(grow){
     heartImg.width = 30;
     heartImg.height = 30;

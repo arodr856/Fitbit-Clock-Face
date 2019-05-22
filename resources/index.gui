@@ -1,23 +1,23 @@
 <svg viewport-fill="black">
 
-  <section id='stats' x='10' y='250' width='250' height='40'>
+  <section id='stats' x='10' y='250' height='40'>
     
     <use href='#heart'/>
 
-    <use id="stats-cycle" href="#cycleview"  x='$+5' width='220' pointer-events="visible">
+    <use id="stats-cycle" href="#cycleview"  x='$+4' width='220' pointer-events="visible">
 
       <use href="#cycleview-item" class="cycle-item">
-        <text id='heartImg' text-anchor='start' fill='white' font-size='24'>09/14/13</text>
+        <text id='myDate' text-anchor='start' fill='white' font-size='24'>09/14/13</text>
       </use>
 
       <use href="#cycleview-item" class="cycle-item">
         <text id='bpm' text-anchor='start' fill='white' text-length='3' font-size='24'>3838</text>
 
-        <image id='stepsIcon' y='10' x='$+5' href='images/steps.png'/>
-        <text id='steps' x='$+5' text-anchor='start' fill='white' text-length='3' font-size='24'>10000</text>
+        <image id='stepsIcon' y='10' x='$+4' href='images/steps.png'/>
+        <text id='stepsText' x='$+4' text-anchor='start' fill='white' text-length='3' font-size='24'>10000</text>
 
-        <image id='calsIcon' y='10' x='$+5' href='images/cals.png'/>
-        <text id='calories' x='$+5' text-anchor='start' fill='white' text-length='3' font-size='24'>10000</text>
+        <image id='calsIcon' y='10' x='$+4' href='images/cals.png'/>
+        <text id='caloriesText' x='$+4' text-anchor='start' fill='white' text-length='3' font-size='24'>10000</text>
 
       </use>
 
@@ -26,9 +26,9 @@
     </use>
   </section>
 
-  <text x='45%' y='40%' id='day' fill='white' font-size='45' text-anchor='middle' text-length="20">
+  <text x='47%' y='40%' id='day' fill='white' font-size='45' text-anchor='middle' text-length="20">
   </text>
-  <text x='45%' y='55%' id='date' fill='white' font-size='45' text-anchor='middle' text-length="20">
+  <text x='47%' y='55%' id='date' fill='white' font-size='45' text-anchor='middle' text-length="20">
   </text>
 
   <g transform="rotate(90)">
